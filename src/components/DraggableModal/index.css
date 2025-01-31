@@ -1,0 +1,24 @@
+.dragg-it{
+    cursor: grab;
+    overflow: scroll;
+
+    border-radius: 10px;
+    padding: .75em;
+
+    width: 855px;
+    
+    background-color: rgba(255, 255, 255, 0.15);   
+}
+
+.toolbar-open {
+    z-index: 100;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .toolbar-closed {
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+  }
+  

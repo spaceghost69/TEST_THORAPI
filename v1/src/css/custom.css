@@ -1,0 +1,500 @@
+/* Base styling for the entire app */
+#root {
+  --font-size: 1em;
+  --dark-bg: red;
+  /* Primary dark background */
+  --dark-secondary-bg: #ff9900;
+  /* Secondary background for cards and areas needing slight contrast */
+  --accent-color: #ff9900;
+  /* Bright orange for accents */
+  --text-color: #ffffff;
+  /* White text for general use */
+
+  --dark-text-color: #2d2d2d;
+  /* White text for general use */
+  --bs-table-bg: white;
+  background-color: var(--dark-bg);
+  /* Black
+  
+  margin: 0 auto;
+  margin-top: 3em;
+  padding: 0;
+  text-align: center;
+
+  color: var(--text-color);
+  
+  font-family: "roboto", sans-serif; /* Assuming Arial, adjust as per the design specifics */
+  font-size: var(--font-size);
+}
+
+.navbarMenu {
+  background-color: var(--dark-bg);
+  /* Background image and gradient overlay */
+    
+}
+
+blockquote{
+  color: var(--text-color);
+}
+
+.featureSvg{
+  max-width: 120px;
+}
+
+body {
+  
+  background: linear-gradient(rgba(129, 129, 129, 0.15), rgba(0, 0, 0, 0.25));
+  /* Background image and gradient overlay */
+  
+  
+  /* Background properties */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* Other styles */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.text-accent {
+
+  color: var(--accent-color);
+}
+
+/* Card Customization */
+.card {
+  border: none;
+}
+
+.card .card-body {
+  color: var(--text-color);
+}
+
+/* Navbar, if present */
+.navbar {
+  background-color: var(--dark-secondary-bg);
+}
+
+/* Links and other elements */
+a,
+.btn-link {
+  color: var(--accent-color);
+}
+
+a:hover,
+.btn-link:hover {
+  color: darken(var(--accent-color), 10%);
+}
+
+/* Specific overrides or additional customizations */
+.custom-class {
+  background-color: var(--dark-secondary-bg);
+  color: var(--text-color);
+}
+
+/* This is a basic setup, and you might need to expand upon or adjust these styles 
+   depending on the exact components and layout specifics of your application. */
+
+/* Styling for logos */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Animation for the logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Styling for documentation links */
+.read-the-docs {
+  color: #bbb;
+  /* Light grey for readable contrast */
+}
+
+/* Hero section styling for dark mode */
+.hero {
+  margin:0;
+  padding: 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75)),
+    url("https://valkyrlabs.com/assets/thor-api-DgIzhfuQ.png") top center/cover;
+  color: #fff;
+  border-radius: 0;
+  height: 60vh;
+  width: 100%;
+  opacity: .95;
+
+}
+
+/* Hero section styling for dark mode */
+.footer {
+  background: linear-gradient( rgba(0, 0, 0, 0.75),rgba(255, 255, 255, 0.5));
+  color: #fff;
+  height: 50vh;
+
+}
+
+.App button {
+  background-color: #fa8231;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e67e22;
+}
+
+/* Styling for feature sections in dark mode */
+.features div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+/* Testimonials section styling for dark mode */
+
+/* Call to action section styling */
+.cta-final {
+  background-color: #fa8231;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.cta-final button {
+  background-color: #fff;
+  color: #fa8231;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-final button:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/* Footer styling for dark mode */
+footer {
+  
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fa8231;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+.big-hero-section {
+  height: 100vh;
+  
+  text-align: center;
+}
+
+
+.hero-section {
+  height: 50vh;
+  
+  text-align: center;
+}
+
+h1,
+h4 {
+  color: var(--text-color);
+}
+
+h2 {
+  color: #ff9900;
+  /* Accent color for headers */
+}
+
+.social-links a {
+  color: #ffffff;
+  /* Orange color for icons */
+  font-size: 48px;
+  /* Larger icons for better visibility */
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #000000;
+  /* Lighter color on hover */
+}
+
+
+.form-control {
+  background-color: #333;
+  /* Dark input fields for contrast */
+  color: #fff;
+  /* White text for readability */
+  border: none;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 106, 0, 0.5);
+  /* Glow effect on focus */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ddd;
+  /* Lighter placeholder text for better readability */
+  opacity: 1;
+  /* Firefox */
+}
+
+.background-container {
+  position: relative;
+  min-height: 300vh;
+  width: 100%;
+  overflow: hidden;
+  /* Hide any overflow from the background */
+}
+
+.background-container>.RayCastWaves {
+  position: absolute;
+  min-height: 320em;
+  /* Make the container fill the viewport height */
+  left: 0;
+  width: 100%;
+  z-index: -10;
+  /* Ensure it is behind other content */
+  pointer-events: none;
+  /* Prevent the background from capturing pointer events */
+}
+
+.content-container {
+  position: relative;
+
+  margin: 3em;
+  top: 0px;
+
+  z-index: 1;
+  /* Ensure it is on top of the background */
+  pointer-events: auto;
+  /* Ensure this container is interactive */
+}
+
+.carouselCard {
+  height: 450px;
+  margin: 1.5em;
+  min-width: 550px;
+}
+
+
+.thumbnailImage {
+  margin-right: 1em;
+  float: left;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 14em;
+}
+
+.coolImage {
+  margin-right: 1em;
+  float: left;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 250px;
+  max-height: 250px;
+
+}
+
+.menuTextContent {
+
+  margin-left: 5px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  text-shadow: rgba(0, 0, 0, 0.4) -2px -2px 1px;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.menuTextContentSM {
+
+  margin-left: 5px;
+  margin-right: 5px;
+  color: var(--text-color);
+  text-shadow: rgba(0, 0, 0, 0.4) -2px -2px 1px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+
+.heroText {
+
+  color: var(--dark-text-color);
+  font-size: 1.5em;
+  text-shadow: rgba(255, 255, 255, 0.9) -1px -1px 1px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  min-width: 80%;
+  padding: .5em;
+}
+
+
+.menuText {
+
+  color: var(--text-color);
+  text-shadow: rgba(0, 0, 0, 0.4) -2px -2px 1px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, .25);
+  border-radius: 10px;
+  min-width: 80%;
+  padding: .5em;
+}
+
+.coolText {
+  background-color: rgba(0, 0, 0, .05);
+  overflow-Y: scroll;
+  border-radius: 10px;
+  min-width: 100%;
+  padding: 1em;
+  min-height: 260px;
+  max-height: 260px;
+}
+
+
+
+
+
+.titleImage {
+  max-width: 200%;
+}
+
+
+.col-md-6 {
+  background-color: "red";
+  border: 0;
+}
+
+.megaIcon {
+  opacity: .25;
+  float: left;
+  color: var(--text-color);
+  z-index: -1;
+  word-wrap: break-word;
+  margin-top: -2em;
+  margin-left: -5em;
+  margin-bottom: -5em;
+
+}
+
+
+.pricing-container {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pricing-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-header {
+  background-color: #0D1B2A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+}
+
+.pricing-price {
+  color: #1B263B;
+  font-size: 48px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pricing-duration {
+  font-size: 24px;
+  color: #7B8A99;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid #E5E5E5;
+  text-align: center;
+}
+
+.pricing-button {
+  background-color: #1B263B;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.pricing-button:hover {
+  background-color: #0D1B2A;
+}
+
+.tableCell {
+  overflow: scroll;
+  min-width: 200px;
+  max-height: 30px;
+}
+
+
+.nav-link {
+  
+  color: #fff;
+}
+/* Active effect */

@@ -1,0 +1,58 @@
+/* Ensure the parent container for both toolbar and visualization */
+.openapi-viz-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-bg);
+}
+
+/* The 3D visualization container should be at a neutral z-index */
+.surface-area-container {
+  position: relative;
+  z-index: 0; /* Keep it above any negative layers */
+  width: 100%;
+  height: 100%;
+  pointer-events: auto; /* Allows interaction with the 3D scene */
+}
+
+/* Floating control panel (toolbar) styling */
+.floating-control-panel {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background: var(--dark-secondary-bg);
+  padding: 1em;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+  /* Default state can be closed or open depending on the logic in your component */
+}
+
+/* When toolbar is open and interactive */
+.toolbar-open {
+  z-index: 100;        /* Visible above the scene */
+  pointer-events: auto;/* Interactable */
+  opacity: 1;
+}
+
+/* When toolbar is closed and should not block interactions */
+.toolbar-closed {
+  z-index: -1;         /* Behind the scene, effectively hidden */
+  pointer-events: none;/* Not interactable, so scene is fully accessible */
+  opacity: 0;
+}
+
+/* Optional toggle button to reopen the toolbar if closed */
+.toolbar-toggle-button {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  z-index: 101;
+  cursor: pointer;
+  background: var(--dark-bg);
+  color: var(--text-color);
+  border-radius: 50%;
+  padding: 0.5em;
+  pointer-events: auto;
+}

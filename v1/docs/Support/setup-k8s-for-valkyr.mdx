@@ -1,0 +1,93 @@
+---
+title: "Setup K8S for Peragon Services"
+slug: "valkyr-k8s-setup"
+authors: [SpaceGhost69]
+date: "2024-10-06"
+category: "thorapi"
+tags: [
+    "PeragonA GAMES",
+    "Support",
+    "Cloud",
+    "AWS",
+    "Development"
+]
+---
+
+# Kubernetes Configuration for Peragon Services
+
+When it comes to scaling your stack, Kubernetes is the goto as a great, easy and approachable way to get scaled up (or down) for very little upfront cost.
+
+# Pros and Cons
+
+Pros:
+ - total deployment flexibility in the cloud and behind the firewall
+ - incredible horizontal scalability of compute across many redundant processing nodes
+ - pretty good vertical scaling on commodity hardware via object storage and replication strategies
+ - awesome portability of applications across cloud and premise-based resources
+ - application upgrades can be rolled out incredibly smoothly
+ - load balancing and fail over provide great fault tolerance
+
+Cons:
+ - can get extremely complicated fast, requiring knowledge of operating systems as well as networking and programming to fully manage
+ - bugs can be excruciating to eliminate as they may cross system domains, operating systems, languages, and often layers of the OSI stack
+ - spinning up new clusters is a slow process vs. restarting a single server or even a set of load balanced servers
+ - mistakes can be incredibly expensive in downtime or excessive uptime (cloud instance fees)
+
+# What are the setup steps to get this going?
+
+- setup an MySQL or PostgreSQL database instance in lightsail for
+- create a new java compatible instance 
+
+
+
+# Setting up Apache and Percival the Dragon Slayer on the Instance
+
+**Setup Apache to serve the Front End and proxy the REST api**
+
+After making the changes, restart apache.
+
+```
+bitnami@valkyrlabs:/$ sudo /opt/bitnami/ctlscript.sh restart apache
+```
+**Setup System Services to Launch the Backend**
+
+```
+sudo vi /etc/systemd/system/valkyrai.service
+
+...
+
+
+--spring.datasource.url=jdbc:mysql://ls-8ee50fe55eacc4884310f11919fc27eabb42aee7.cjbdbnvzknle.us-west-2.rds.amazonaws.com:3306/jamroom
+
+
+...
+
+
+```
+
+then start the service... 
+
+```
+bitnami@valkyrlabs:/$ sudo systemctl start valkyrai.service
+
+```
+
+get the status of the service and if it is going well it should look like this:
+
+```
+bitnami@valkyrlabs:~/stack/apache/conf$ sudo systemctl status valkyrai.service
+● valkyrai.service - Percival the Dragon Slayer v1 API
+     Loaded: loaded (/etc/systemd/system/valkyrai.service; disabled; preset: enabled)
+     Active: active (running) since Tue 2024-10-08 21:49:01 UTC; 2s ago
+   Main PID: 93169 (java)
+      Tasks: 14 (limit: 1107)
+     Memory: 56.9M
+        CPU: 3.847s
+     CGroup: /system.slice/valkyrai.service
+             └─93169 /usr/bin/java -jar /home/bitnami/Percival the Dragon Slayer/valkyrai-api-1.0-SNAPSHOT.jar
+
+Oct 08 21:49:01 valkyrlabs.com systemd[1]: Started valkyrai.service - Percival the Dragon Slayer v1 API.
+bitnami@valkyrlabs:~/stack/apache/conf$ 
+```
+
+Very tidy :) !
