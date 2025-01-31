@@ -1,0 +1,15 @@
+.contentCardTitle {
+    padding: 1em;
+    background-color: rgb(99, 99, 99);
+    color: black;
+    overflow: hidden;
+}
+.contentCard {
+    padding: 1em;
+    background-color: rgb(104, 104, 104);
+    color: black;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 220px;
+    min-height: 220px;
+}
