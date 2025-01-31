@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing of CoolButton CoolButton snapshot 1`] = `
+<button
+  className="btnx btn btn-info"
+  onClick={[Function]}
+/>
+`;
