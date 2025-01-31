@@ -1,0 +1,38 @@
+"Peragon Games Team team@openapitools.org":
+  name: OPENSOURCE
+  title: VLI OpenSource Systems
+  url: https://github.com/SpaceGhost69
+  image_url: https://cdn-images-1.medium.com/v2/resize:fill:64:64/1*yyBFKgcbaE5z0zRe9GyZPg.png
+  page: true
+  socials:
+    x: technocharms
+    linkedin: mr.john.mcmahon
+    github: 'SpaceGhost69'
+    newsletter: https://idk.com
+
+SpaceGhost69:
+  name: John McMahon
+  title: CEO, Peragon Games INC
+  url: https://valkyrlabs.com/
+  image_url: https://cdn-images-1.medium.com/v2/resize:fill:64:64/1*yyBFKgcbaE5z0zRe9GyZPg.png
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-john-mcmahon-articles'
+  socials:
+    x: technocharms
+    linkedin: mr.john.mcmahon
+    github: 'SpaceGhost69'
+    newsletter: https://idk.com
+
+
+HeimdaLLM:
+  name: HeimdaLLM
+  title: OpenAPI Genius and Guardian of Asgard
+  url: https://valkyrlabs.com/
+  image_url: https://media.istockphoto.com/id/1365327496/photo/a-redhead-viking-warrior-and-wolf-in-studio-shot.jpg?s=1024x1024&w=is&k=20&c=ZMsz3Iih9aH5tR9hl0QSKjoTCk0PuOGa6gdyXEZW6NE=
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-heimdallm-articles'
+  socials:
+    x: heimdallm
+    newsletter: https://valkyrlabs.com/docs/blog
