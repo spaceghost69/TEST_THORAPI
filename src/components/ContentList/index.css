@@ -1,0 +1,43 @@
+button:active{
+    border-color:orange;
+    border-width: 2px;
+}
+
+.contentCarousel{
+    border-radius: 10px;
+    background-color: rgb(80, 80, 80);
+    padding-top: 1em;
+    padding-bottom: 2em;
+    vertical-align: middle;
+    align-items: center;
+    float: center;
+}
+
+.card{
+    border-radius: 10px;
+}
+.card-title {
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.contentCarouselCard{
+    background-color: rgb(128, 128, 128);
+    
+    margin:0px;
+    max-height: 120px;
+    min-height: 120px;
+
+    padding:0px;
+}
+
+.contentCarouselItem{
+    border-radius: 40px;
+    margin: 0em;
+    min-height: 520px;
+    
+    margin-left: 4em;
+    margin-right: 4em;
+}
