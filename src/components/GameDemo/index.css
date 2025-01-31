@@ -1,0 +1,23 @@
+.six-disciplines-container{
+    height: 1000px;
+    margin: 1em;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.six-disciplines-card{
+    min-height: 300px;
+    margin: 1em;
+}
+
+.smooth-image-overlay{
+    opacity: .3;
+
+}
+
+.smooth-image{
+    z-index: -1;
+    border-radius: 8px;
+    max-height: 256px;
+    overflow: hidden;
+    border: none;
+}
